@@ -94,7 +94,7 @@ Voici le resultat
 
 
  
-### Executer les tests unitaires
+### Exécution des tests unitaires
 
 ```bash
 $>php ./vendor/bin/phpunit --verbose --testdox tests/UserTest.php
