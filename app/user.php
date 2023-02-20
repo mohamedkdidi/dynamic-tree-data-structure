@@ -64,7 +64,7 @@ class User extends Model {
     }
     
     /**
-    * retourner un entier indiquant le nombre total d’enfants sur tous les niveaux de l’arbre..
+    * retourner un entier indiquant le nombre total d’enfants sur tous les niveaux de l’arbre.
     *
     * @return int
     */

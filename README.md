@@ -1,12 +1,47 @@
 
 ### Insaller le projet
 
- `git clone dynamic-tree-php `
+ `git clone https://github.com/mohamedkdidi/dynamic-tree-data-structure.git `
 
- `cd dynamic-tree-php `
+ `cd dynamic-tree-data-structure `
 
  `composer install `
 
+### Funtion getChildrenCount
+
+qui retourner un entier indiquant le nombre total d’enfants sur tous les niveaux de l’arbre.
+
+```php
+<?php
+
+    public function getChildrenCount(): int {
+        $count = 0;
+        $stack = [];
+        $children = $this->children();
+        
+        # ajouter les enfants directs de l'utilisateur à la pile
+        foreach ($children as $child) {
+            $stack[] = $child;
+            $count++;
+        }
+        
+        # parcourir la pile pour explorer les enfants directs et les petits-enfants
+        while (!empty($stack)) {
+            $node = array_shift($stack);
+            $grandchildren = $node->children();
+            
+            # ajouter les enfants directs du nœud à la pile et incrémenter le compteur
+            foreach ($grandchildren as $child) {
+                $stack[] = $child;
+                $count++;
+            }
+        }
+        
+        return $count;
+        
+    }
+    
+```
 
 ### Exemple
 

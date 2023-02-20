@@ -1,0 +1,30 @@
+on: [push]
+name: CI
+jobs:
+  build:
+    runs-on: [ubuntu-latest]
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Check PHP Version
+      run: php -v
+    
+    - name: Check Composer Version
+      run: composer -V
+    
+    - name: Check PHP Extensions
+      run: php -m    
+    
+    - name: Install dependencies
+      uses: php-actions/composer@v6
+      with:
+        dev: no
+        args: --profile --ignore-platform-reqs
+    
+    - uses: actions/upload-artifact@v3
+        with:
+          name: debug-output
+          path: output.log
+
+    - name: Run Testsuite
+      run: php ./vendor/bin/phpunit --verbose --testdox tests/UserTest.php
