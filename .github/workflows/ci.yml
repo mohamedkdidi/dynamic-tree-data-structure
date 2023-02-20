@@ -43,5 +43,5 @@ jobs:
         name: debug-output
         path: output.log
 
-    #- name: Run Testsuite
-    #  run: php ./vendor/bin/phpunit --verbose --testdox tests/UserTest.php
+    - name: Run Testsuite
+      run: php ./vendor/bin/phpunit --verbose --testdox tests/UserTest.php
