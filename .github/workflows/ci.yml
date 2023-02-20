@@ -22,9 +22,9 @@ jobs:
         args: --profile --ignore-platform-reqs
     
     - uses: actions/upload-artifact@v3
-        with:
-          name: debug-output
-          path: output.log
+      with:
+        name: debug-output
+        path: output.log
 
     - name: Run Testsuite
       run: php ./vendor/bin/phpunit --verbose --testdox tests/UserTest.php
