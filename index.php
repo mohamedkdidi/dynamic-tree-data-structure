@@ -34,14 +34,14 @@ $a3 = new User(4, 'A3', $arA);
 $arA->printTree();
 
 
-# Exemple Arbre A
+# Exemple Arbre B
 $arB = new User(1, 'B');
 $b1 = new User(2, 'B1', $arB);
 $b2 = new User(3, 'B2', $arB);
 $b1_1 = new User(4, 'B1_1', $b1);
 $arB->printTree();
 
-# Exemple Arbre A
+# Exemple Arbre C
 $arC = new User(1, 'C');
 $c1 = new User(2, 'C1', $arC);
 $c2 = new User(3, 'C2', $arC);
@@ -51,8 +51,6 @@ $c3_1 = new User(6, 'C3_2', $c3);
 $c3_2 = new User(7, 'C3_3', $c3);
 $c3_1_1 = new User(7, 'C3_3', $c3_1);
 $arC->printTree();
-
-
 
 
 ?>
