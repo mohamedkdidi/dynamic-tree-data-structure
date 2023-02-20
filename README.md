@@ -89,6 +89,76 @@ Voici le resultat
 |__ ___ ___ __Josef fils de Amine a 0 enfant(s) 
 
 
+```php
+# Exemple Arbre A
+$arA = new User(1, 'A');
+$a1 = new User(2, 'A1', $arA);
+$a2 = new User(3, 'A2', $arA);
+$a3 = new User(4, 'A3', $arA);
+$arA->printTree();
+
+
+# Exemple Arbre A
+$arB = new User(1, 'B');
+$b1 = new User(2, 'B1', $arB);
+$b2 = new User(3, 'B2', $arB);
+$b1_1 = new User(4, 'B1_1', $b1);
+$arB->printTree();
+
+# Exemple Arbre A
+$arC = new User(1, 'C');
+$c1 = new User(2, 'C1', $arC);
+$c2 = new User(3, 'C2', $arC);
+$c3 = new User(4, 'C3', $arC);
+$c2_1 = new User(5, 'C3_1', $c2);
+$c3_1 = new User(6, 'C3_2', $c3);
+$c3_2 = new User(7, 'C3_3', $c3);
+$c3_1_1 = new User(7, 'C3_3', $c3_1);
+$arC->printTree();
+```
+
+
+### Resultat
+
+##### Arbre A
+
+|_A a 3 enfant(s) 
+
+|__ __A3 fils de A a 0 enfant(s) 
+
+|__ __A2 fils de A a 0 enfant(s) 
+
+|__ __A1 fils de A a 0 enfant(s) 
+
+
+##### Arbre B
+
+|_B a 3 enfant(s) 
+
+|__ __B2 fils de B a 0 enfant(s) 
+
+|__ __B1 fils de B a 1 enfant(s) 
+
+|__ ___ __B1_1 fils de B1 a 0 enfant(s)
+
+##### Arbre C
+
+|_C a 7 enfant(s) 
+
+|__ __C3 fils de C a 3 enfant(s) 
+
+|__ __C2 fils de C a 1 enfant(s) 
+
+|__ __C1 fils de C a 0 enfant(s) 
+
+|__ ___ __C3_3 fils de C3 a 0 enfant(s) 
+
+|__ ___ __C3_2 fils de C3 a 1 enfant(s) 
+
+|__ ___ __C3_1 fils de C2 a 0 enfant(s) 
+
+|__ ___ ___ __C3_3 fils de C3_2 a 0 enfant(s) 
+
 
  
 ### Executer les tests unitaires
