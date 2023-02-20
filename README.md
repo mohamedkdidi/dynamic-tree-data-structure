@@ -54,10 +54,10 @@ Pour l'arborescence suivante
 <?php
 // Créer une arborescence d'utilisateurs
 $root = new User(1, 'Adam');
-$bob = new User(2, 'Mohamed', $root);
+$mohamed = new User(2, 'Mohamed', $root);
 $charlie = new User(3, 'Charlie', $root);
-$dave = new User(4, 'Dave', $bob);
-$eve = new User(5, 'Eve', $bob);
+$dave = new User(4, 'Dave', $mohamed);
+$eve = new User(5, 'Eve', $mohamed);
 $frank = new User(6, 'Frank', $charlie);
 $gina = new User(7, 'Gina', $charlie);
 $amine = new User(8, 'Amine', $charlie);
